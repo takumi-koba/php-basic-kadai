@@ -12,6 +12,7 @@
         $grocery_data = ['name'=>'onion','price'=>200,'weight'=>160];
         
         print_r ($grocery_data);
+        echo $grocery_data['name'];
         ?>
     </p>
 </body>
