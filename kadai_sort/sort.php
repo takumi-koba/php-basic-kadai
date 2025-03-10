@@ -3,43 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PHP基礎編</title>
+    <title>kadai_sort</title>
+
 </head>
 
 <body>
     <p>
         <?php
-            function up_two_arguments($nums, $a){
-                if ($nums == $a){
-                    return 0;
-                }
-                return ($nums < $a)? -1 : 1;
+
+        $nums = [15, 4, 18, 23, 10];
+
+        function sort_2way($nums, $order) {
+            if ($order === true) {
+                echo '昇順にソートします。<br>';
+                sort($nums);
+            } else {
+                echo '降順にソートします。<br>';
+                rsort($nums);
             }
 
-            function down_two_arguments($nums, $a){
-                if ($nums == $a){
-                    return 0;
-                }
-                return ($nums > $a)? -1 : 1;
+            foreach ($nums as $num) {
+                echo $num . '<br>';
             }
+        }
 
-                    // ソートする配列を宣言
-            $nums = [15, 4, 18, 23, 10 ];
-            echo '昇順にソートします。<br>';
-            usort($nums, "up_two_arguments");
-
-            foreach($nums as $key => $value){
-                echo "$value<br>";
-            }
+        sort_2way($nums, true);
+        sort_2way($nums, false);
 
 
-            echo "降順にソートします<br>";
-            usort($nums, "down_two_arguments");
-
-            foreach($nums as $key => $value){
-                echo "$value<br>";
-            }
- 
         ?>
     </p>
 </body>
