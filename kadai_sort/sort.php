@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>kadai_sort</title>
+
 </head>
 
 <body>
@@ -28,6 +29,7 @@
 
         sort_2way($nums, true);
         sort_2way($nums, false);
+
 
         ?>
     </p>
